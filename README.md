@@ -1,2 +1,1 @@
-# solana-spl-token-project
-"A comprehensive guide and toolkit for deploying custom SPL tokens on the Solana blockchain. Includes scripts for minting, and managing supply."
+# Solana Token Contract\n\nThis is a standard SPL Token contract built with Anchor.\n\n## Scripts\n- `scripts/deploy.sh`: Deploy to Devnet/Localnet.\n- `scripts/verify.sh`: Verify program on explorer.\n
