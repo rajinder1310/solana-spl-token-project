@@ -1,0 +1,69 @@
+Streaming transaction logs mentioning UY89vX8nRLbuy8LZCZy9ThMbNp1669Bi7Ue9uMwZC6P. Confirmed commitment
+Transaction executed in slot 6:
+  Signature: 4siRfPykFWoqMP91tsa3dvny2auqjN7sD9jstmPb1LP2zeqv8VVk7QSwqxHdagwgqh1kg1q8JC6iKn3VtPX5PovU
+  Status: Ok
+  Log Messages:
+    Program UY89vX8nRLbuy8LZCZy9ThMbNp1669Bi7Ue9uMwZC6P invoke [1]
+    Program log: Instruction: InitializeMint
+    Program 11111111111111111111111111111111 invoke [2]
+    Program 11111111111111111111111111111111 success
+    Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [2]
+    Program log: Instruction: InitializeMint2
+    Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 2780 of 193073 compute units
+    Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success
+    Program log: Token mint initialized: 5Qvq81Rftn5BDsCPo39TuatMRN5syipTLbQRj3HFgabZ
+    Program data: Lqtroa9o7OZBj/jCU6Ts11WLpsIJM7eQVgYOuXN4SMO+E1Bt8EL58An3jZoTX3eGdPtfqJ/4EKWZuHuymLucr+1ynsaB8W1DXA==
+    Program UY89vX8nRLbuy8LZCZy9ThMbNp1669Bi7Ue9uMwZC6P consumed 23624 of 200000 compute units
+    Program UY89vX8nRLbuy8LZCZy9ThMbNp1669Bi7Ue9uMwZC6P success
+Transaction executed in slot 8:
+  Signature: 3z1W3TDDTLBYTFp2vVYdjCL28aF7TkUBEjoeQrRUmm7FJGoJAE926BBjotUNVGPaoaxWfaUVcf6qJ5thxG8ztZBR
+  Status: Ok
+  Log Messages:
+    Program UY89vX8nRLbuy8LZCZy9ThMbNp1669Bi7Ue9uMwZC6P invoke [1]
+    Program log: Instruction: InitializeConfig
+    Program 11111111111111111111111111111111 invoke [2]
+    Program 11111111111111111111111111111111 success
+    Program log: Tax config initialized with rate: 100 basis points
+    Program UY89vX8nRLbuy8LZCZy9ThMbNp1669Bi7Ue9uMwZC6P consumed 10633 of 200000 compute units
+    Program UY89vX8nRLbuy8LZCZy9ThMbNp1669Bi7Ue9uMwZC6P success
+Transaction executed in slot 10:
+  Signature: 5cBhTX33dA9c9BeKDTBfQrhWpTFE9bkGH9yDbedNU6eFsFPz5bTiR34XXFe5rm5RSDqEpWXtZVsuUyFkVUZKLPzv
+  Status: Ok
+  Log Messages:
+    Program UY89vX8nRLbuy8LZCZy9ThMbNp1669Bi7Ue9uMwZC6P invoke [1]
+    Program log: Instruction: MintToken
+    Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [2]
+    Program log: Instruction: MintTo
+    Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 4492 of 193730 compute units
+    Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success
+    Program log: Minted 1000 tokens to 3dRKNcfLjg3XqwhZVxxKN8PE8NEqT3v4veuJepJWLvwf
+    Program data: z9SAwq82QBhBj/jCU6Ts11WLpsIJM7eQVgYOuXN4SMO+E1Bt8EL58CcLxy2R4sxiF9wC/L/3PAr9/kncyMUr3LsYzlavfW9+6AMAAAAAAAA=
+    Program UY89vX8nRLbuy8LZCZy9ThMbNp1669Bi7Ue9uMwZC6P consumed 23434 of 200000 compute units
+    Program UY89vX8nRLbuy8LZCZy9ThMbNp1669Bi7Ue9uMwZC6P success
+Transaction executed in slot 11:
+  Signature: 3fMUyb5B7AafJSq8myRbD232qq9196Ln4DpTR9zNSaaihC7EJNMmUDFDys5nVTxy2UhUsF9UJRnuThSnZA9Xvurv
+  Status: Ok
+  Log Messages:
+    Program UY89vX8nRLbuy8LZCZy9ThMbNp1669Bi7Ue9uMwZC6P invoke [1]
+    Program log: Instruction: UpdateConfig
+    Program log: Tax config updated to: 200 basis points
+    Program UY89vX8nRLbuy8LZCZy9ThMbNp1669Bi7Ue9uMwZC6P consumed 4711 of 200000 compute units
+    Program UY89vX8nRLbuy8LZCZy9ThMbNp1669Bi7Ue9uMwZC6P success
+Transaction executed in slot 13:
+  Signature: d5fmWmNFatxnd7y74mHG8pzgy4xcuBbfxRD3cXYD5HSH4MvUN6imKzZRvuvVxrL2gpionPoMBuWki947Zu5bBMD
+  Status: Ok
+  Log Messages:
+    Program UY89vX8nRLbuy8LZCZy9ThMbNp1669Bi7Ue9uMwZC6P invoke [1]
+    Program log: Instruction: TransferToken
+    Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [2]
+    Program log: Instruction: Transfer
+    Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 4645 of 187850 compute units
+    Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success
+    Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA invoke [2]
+    Program log: Instruction: Transfer
+    Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA consumed 4645 of 180899 compute units
+    Program TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA success
+    Program log: Transferred 98 tokens (Tax: 2)
+    Program data: jFZqJlWdyvonC8ctkeLMYhfcAvy/9zwK/f5J3MjFK9y7GM5Wr31vfrBBDC8/qbE6FY5dU0Y5z5Qck2U9tkeQTmOP3vfP4ycRZAAAAAAAAAACAAAAAAAAAPeNmhNfd4Z0+1+on/gQpZm4e7KYu5yv7XKexoHxbUNc
+    Program UY89vX8nRLbuy8LZCZy9ThMbNp1669Bi7Ue9uMwZC6P consumed 25483 of 200000 compute units
+    Program UY89vX8nRLbuy8LZCZy9ThMbNp1669Bi7Ue9uMwZC6P success
