@@ -5,6 +5,7 @@ seeds = false
 skip-lint = false
 
 [programs.localnet]
+staking_contract = "9vF8iR37L3nKtBR4x6mhy8dE8eMLUzcuCNbSCGCpnYHG"
 token_contract = "UY89vX8nRLbuy8LZCZy9ThMbNp1669Bi7Ue9uMwZC6P"
 
 [registry]

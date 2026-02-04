@@ -22,6 +22,7 @@ This is a **Smart Contract** (called a "Program" in Solana) that manages a custo
 It's not just a basic token; it has a **Tax Feature**:
 *   **Minting:** You can create (print) new tokens.
 *   **Transfer with Tax:** When someone sends tokens, a small % is automatically cut and sent to a "Tax Wallet" (like a government tax).
+*   **Staking (New!):** Users can now "Deposit" tokens into a secure Vault (Staking Contract) and we record their balance on-chain.
 
 ---
 
@@ -77,6 +78,35 @@ This project has 3 main actions provided in `programs/token-contract/src/lib.rs`
     2.  Sends `Amount - Tax` to Bob.
     3.  Sends `Tax` to the Tax Wallet.
     4.  All happens in **one atomic transaction** (creates two transfers internally).
+
+---
+
+## 🏦 Staking Contract (New Feature!)
+We have added a second contract: `staking_contract`. Here is how it works:
+
+### 1. The Vault (PDA)
+*   **Concept:** We need a safe place to keep user tokens. We can't trust a human with the key.
+*   **Solution (PDA):** We create a **Program Derived Address (PDA)**. This is a wallet address that has **NO Private Key**. Only our Code can make it sign transactions.
+*   **Analogy:** A digital piggy bank that only opens when the code says "Open".
+
+### 2. User Tracking (`UserStakeInfo`)
+*   **Concept:** When you deposit money in a bank, the bank writes in their ledger: *"John deposited $500 on Tuesday"*.
+*   **Solution:** We create a specific account (`UserStakeInfo`) for every user.
+*   **Data Stored:**
+    *   `amount`: How many tokens they staked.
+    *   `deposit_ts`: Timestamp (When they deposited).
+
+### 3. `deposit` Function (The Magic)
+This function does 3 things in one go:
+1.  **CPI (Cross Program Invocation):**
+    *   Our Staking Contract talks to the **Solana Token Program** (The Bank Manager).
+    *   It says: *"Here is a signed cheque from User. Please move 500 tokens from User's Wallet to my Vault."* (This is the `token::transfer` code).
+2.  **Update Ledger:** It adds +500 to the user's `UserStakeInfo` account.
+3.  **Emit Log:** It shouts to the world (Event Log): *"User X just staked 500 tokens!"*
+
+### 4. Security Measures
+*   **`Signer<'info>`:** We ensure the person calling `deposit` is actually the owner of the wallet (they must sign the transaction).
+*   **`seeds = [b"vault", ...]`:** We verify that the Vault address is the REAL Vault, not a fake wallet address injected by a hacker.
 
 ---
 
