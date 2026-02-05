@@ -41,6 +41,23 @@ A **PDA** is like a special safety box that *only* this Program can open. We use
 
 ---
 
+## 🔑 PDAs Explained (The 3 Key Components)
+
+In this project, we use **3 different PDAs**. Here is the difference:
+
+| PDA Name | Concept | Analogy | Why we need it? | Encoded Seed |
+| :--- | :--- | :--- | :--- | :--- |
+| **Global Config** | **The Rulebook** | A Notice Board | Stores global settings like **Admin Address** and **Fee %**. One per program. | `b"config"` |
+| **Vault** | **The Safe** | A Bank Vault | Holds all the **Tokens** deposited by users. Secure & Ownerless. | `b"vault" + Mint` |
+| **UserStakeInfo** | **The Ledger** | Bank Passbook | Stores **Your Balance**. Tracks how much *YOU* deposited. Unique per user. | `b"user" + YourWallet` |
+
+> **Simple Rule:**
+> *   Need to store Money? -> **Vault**
+> *   Need to store Rules? -> **Config**
+> *   Need to store User Data? -> **UserStakeInfo**
+
+---
+
 ## 📖 Syntax Dictionary (Decoding the Code)
 
 You will see these weird words in the code (`lib.rs`). Here is what they mean:
@@ -107,6 +124,13 @@ This function does 3 things in one go:
 ### 4. Security Measures
 *   **`Signer<'info>`:** We ensure the person calling `deposit` is actually the owner of the wallet (they must sign the transaction).
 *   **`seeds = [b"vault", ...]`:** We verify that the Vault address is the REAL Vault, not a fake wallet address injected by a hacker.
+
+### 5. Withdrawal Fee (Dynamic) 💸
+*   **Feature:** When a user withdraws, a fee (default 1%) is deducted.
+*   **Dynamic:** The Admin can change this fee at any time!
+    *   **Instruction:** `update_fee`
+    *   **Admin Only:** Only the wallet that deployed the contract can change the fee.
+*   **Where does it go?** The fee is sent to a separate **Fee Vault** (Admin's wallet), and the rest goes to the User.
 
 ---
 
